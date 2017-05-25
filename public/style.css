@@ -1,0 +1,17 @@
+img  {
+    width: 100%;
+    padding: 2%;
+}
+
+
+.campuses {
+    margin-left : 5%;
+    margin-right : 5%;
+}
+
+.student {
+    height: 50px;
+    background-color: grey;
+    display: block;
+    margin: 2px;
+}
