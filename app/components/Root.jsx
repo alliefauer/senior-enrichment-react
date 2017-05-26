@@ -3,16 +3,8 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Campuses from './Campuses';
 
-export default class Root extends Component {
-  constructor() {
-    super()
-  }
+export default function Root() {
 
-  componentDidMount() {
-
-  }
-
-  render() {
     return (
          <div>
                 <Navbar />
@@ -21,5 +13,5 @@ export default class Root extends Component {
           </div>
       </div>
     )
-}
+
 }
