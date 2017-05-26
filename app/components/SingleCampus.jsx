@@ -32,9 +32,12 @@ export default class SingleCampus extends Component {
              <table className="table table-striped">
                  <tbody>
            {students && students.map(student => {
-             return (  <Student name={student.name}
+             return (   <Student name={student.name}
                             email={student.email}
-                             campus={student.campus.name}/> )
+                             campus={student.campus.name}
+                             value={student.id}
+                             campusId={student.campusId}
+                             /> )
            })
                }
                </tbody>

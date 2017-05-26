@@ -23,7 +23,6 @@ export default class Campuses extends Component {
 
 
   render() {
-      const props = Object.assign({}, this.state)
     return (
         <div className="container-fluid campuses">
             <div className="row">

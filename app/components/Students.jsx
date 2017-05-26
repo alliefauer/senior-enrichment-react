@@ -9,6 +9,7 @@ export default class Students extends Component {
   constructor(props) {
     super(props)
     this.state = {students : []}
+
   }
 
   componentDidMount() {
@@ -21,11 +22,17 @@ export default class Students extends Component {
     console.error('error');
     console.error(err);
   });
-  }
+
+  
+}
+
+
+
+
 
   render() {
-      console.log(props)
-      const props = Object.assign({}, this.state)
+      
+
       const students = this.state.students;
     return (
       <div> 
@@ -37,7 +44,10 @@ export default class Students extends Component {
            {students && students.map(student => {
              return (  <Student name={student.name}
                             email={student.email}
-                             campus={student.campus.name}/> )
+                             campus={student.campus.name}
+                             value={student.id}
+                             campusId={student.campusId}
+                             /> )
            })
                }
                </tbody>

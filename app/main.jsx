@@ -14,8 +14,8 @@ render (
     <Router history={browserHistory}>
       <Route path="/" component={Root}/>
       <Route path="/campuses" component={Root}/>
-      <Route path="/students/:campusId" component={SingleCampus}/>
       <Route path="/students" component={Students} />
+      <Route path="/students/:campusId" component={SingleCampus}/>
     </Router>
   </Provider>,
   document.getElementById('main')

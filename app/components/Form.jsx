@@ -16,6 +16,7 @@ export default class Form extends Component {
         this.addNewStudent = this.addNewStudent.bind(this);
     }
 
+
    
 
       handleNameChange (event) {

@@ -38,5 +38,23 @@ api.post('/students', (req, res, next) => {
 	Students.create({name: req.body.name, email: req.body.email, campusId: req.body.campusId})
 })
 
+api.get('/students/student/:id/', (req, res, next) => {
+	Students.findOne({where: {id : req.params.id}})
+	.then(student => {
+		res.send(student)
+	})
+	.catch(next)
+})
+
+
+
+api.delete('/students/student/:id', (req, res, next) => {
+	const studentId = req.params.id
+	Students.destroy({where: {id : studentId}})
+	//destroy from db
+	.then(() => res.status(204).end())
+	.catch(next);
+})
+
 
 module.exports = api
